@@ -1,0 +1,30 @@
+header {
+  height: 50px;
+  background-color: rgb(212, 202, 189);
+  .container-fluid {
+    margin-right: 0;
+  }
+}
+section {
+  img {
+    margin: 12px 12px 0px 12px;
+  }
+  p {
+    font-size: 1.5em;
+    color: black;
+  }
+  background-color: rgb(255, 255, 255);
+  a:last-of-type {
+    margin-bottom: 10px;
+  }
+
+  .card {
+    margin-top: 10px;
+    background-color: rgb(226, 204, 175);
+  }
+}
+footer {
+  background-color: rgb(212, 202, 189);
+  height: 50px;
+  margin-top: 10px;
+}

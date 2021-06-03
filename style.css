@@ -1,0 +1,37 @@
+header {
+  height: 50px;
+  background-color: #d4cabd;
+}
+
+header .container-fluid {
+  margin-right: 0;
+}
+
+section {
+  background-color: white;
+}
+
+section img {
+  margin: 12px 12px 0px 12px;
+}
+
+section p {
+  font-size: 1.5em;
+  color: black;
+}
+
+section a:last-of-type {
+  margin-bottom: 10px;
+}
+
+section .card {
+  margin-top: 10px;
+  background-color: #e2ccaf;
+}
+
+footer {
+  background-color: #d4cabd;
+  height: 50px;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=style.css.map */
