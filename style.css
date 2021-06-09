@@ -8,6 +8,7 @@ header .container-fluid {
 }
 
 section {
+  max-width: 800px;
   background-color: white;
 }
 

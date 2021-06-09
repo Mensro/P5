@@ -1,38 +1,30 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const id = urlParams.get('id')
-console.log(id)
+async function main() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const id = urlParams.get("id");
+  console.log(id);
 
-fetch(`http://localhost:3000/api/cameras/${id}`)
+  const res = await fetch(`http://localhost:3000/api/cameras/${id}`);
+  if (res.ok) {
+    const product = await res.json();
+    displayProduct(product);
+  }
+}
 
-.then(function (res) {
-    if (res.ok) {
-      return res.json();
-    }
-  })
-  .then(function (value) {
-    console.log(value);
-    makeCard(value, 'contentList')
+main();
 
-  })
-  .catch(function (err) {
-    // Une erreur est survenue
-  });
-
-
-
-  function makeCard(card, elementId){
-    let listElement = document.getElementById(elementId);
-    const price = card.price / 100;
-    listElement.innerHTML += `
+function displayProduct(product) {
+  let listElement = document.getElementById("contentList");
+  const price = product.price / 100;
+  listElement.innerHTML += `
     <div class="card h-100">
-    <img class="card-img-center" src="${card.imageUrl}" alt="..." />
+    <img class="card-img-center" src="${product.imageUrl}" alt="..." />
     <!-- Product details-->
     <div class="card-body p-6">
         <div class="text-center">
             <!-- Product name-->
-            <h5 class="fw-bolder">${card.name}</h5>
-            <h6 class="fw-bolder">${card.description}</h6>
+            <h5 class="fw-bolder">${product.name}</h5>
+            <h6 class="fw-bolder">${product.description}</h6>
             ${price}€
         </div>
     </div>
@@ -45,5 +37,4 @@ fetch(`http://localhost:3000/api/cameras/${id}`)
   </div>
     
     `;
-  }
-
+}
