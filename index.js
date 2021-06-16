@@ -21,7 +21,7 @@ function displayProducts(products) {
             <h5 class="fw-bolder text-center">${product.name}</h5>
         </div>
     </div>
-        <a class="btn btn-outline-dark mt-auto" onclick="addProduct" href="#">ADD TO CART</a>
+        <a class="btn btn-outline-dark mt-auto" onclick="addProduct({$product})" href="">ADD TO CART</a>
         
     </div>
   </div>
