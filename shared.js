@@ -16,7 +16,8 @@ function addProduct(prod) {
 function removeProduct(product) {}
 
 function getProduct() {
-  let item = JSON.parse(localStorage.getItem("cart"));
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  return cart; //retourne une valeur dans le cart.js//
 }
 
 function sendData(data) {
