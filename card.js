@@ -16,9 +16,9 @@ function main() {
     for (i = 0; i < cart.length; i++) {
       const product = cart[i];
       panierHtml += `
-        <div class="container">
-        <div>Quantité 1 - ${product.name}</div>
-        <div>${product.price} € - supp article</div> 
+        <div id="${product.id}" class="container">
+        <div>Quantité ${product.quantity} - ${product.name}</div>
+        <div>${product.price} € - <button  onclick="deleteProduct('${product.id}')" class="btn_suppr">supprimer</button></div> 
         </div>
       `;
     }
@@ -26,4 +26,21 @@ function main() {
   }
 }
 main();
-//
+function deleteProduct(item) {
+  let cart = getProduct();
+  console.log("celui la", cart);
+  for (var i = 0; i < cart.length; i++) {
+    if (cart[i].id === item) {
+      cart[i].quantity -= 1;
+      if (cart[i].quantity < 1) {
+        cart.splice(i, 1);
+        let target = document.getElementById("" + item);
+        target.remove();
+      }
+      //i--;
+    }
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  console.log("celui la apres ", cart);
+  main();
+}
