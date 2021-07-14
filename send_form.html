@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form" method="POST" class="container center_div">
+        <div class="form-row ">
+            <div class="col-md-4 mb-3 container center_div">
+                <label for="validationServer01">First name</label>
+                <input type="text" class="form-control is-valid" id="firstName" placeholder="First name" value="Mark"
+                    required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 container center_div">
+                <label for="validationServer02">Last name</label>
+                <input type="text" class="form-control is-valid" id="lastName" placeholder="Last name" value="Otto"
+                    required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 container center_div">
+                <label for="validationServer02">adress</label>
+                <input type="text" class="form-control is-valid" id="address" placeholder="address" value="Otto"
+                    required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3 container center_div">
+                <label for="validationServer03">City</label>
+                <input type="text" class="form-control is-invalid" id="city" placeholder="City" required>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 container center_div">
+                <label for="validationServer04">email</label>
+                <input type="text" class="form-control is-invalid" id="email" placeholder="example@..." required>
+                <div class="invalid-feedback">
+                    Please provide a valid mail.
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group ">
+            <div class="form-check ">
+                <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+                <label class="form-check-label" for="invalidCheck3">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary container btn_width" type="submit">Submit form</button>
+    </form>
+
+</body>
+<script src="send_form.js"></script>
+
+</html>

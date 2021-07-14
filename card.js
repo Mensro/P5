@@ -16,10 +16,17 @@ function main() {
     for (i = 0; i < cart.length; i++) {
       const product = cart[i];
       panierHtml += `
-        <div id="${product.id}" class="container">
+        <div id="${product.id}" class="container-fluid">
         <div>Quantité ${product.quantity} - ${product.name}</div>
-        <div>${product.price} € - <button  onclick="deleteProduct('${product.id}')" class="btn_suppr">supprimer</button></div> 
+        <div>${product.price} € - <button  onclick="deleteProduct('${
+        product.id
+      }')" class="btn_suppr">-</button></div> 
         </div>
+        <div>${product.price} € - <button  onclick="addProduct('${
+        product.id
+      }')" class="btn_suppr">+</button></div> 
+          </div>
+        <div class="text-right">${product.price * product.quantity} €</div>
       `;
     }
     elem.innerHTML = panierHtml;
@@ -41,6 +48,25 @@ function deleteProduct(item) {
     }
   }
   localStorage.setItem("cart", JSON.stringify(cart));
-  console.log("celui la apres ", cart);
+  console.log("celui apres ", cart);
+  main();
+}
+
+function addProduct(item) {
+  let cart = getProduct();
+  console.log("celui la", cart);
+  for (var i = 0; i < cart.length; i++) {
+    if (cart[i].id === item) {
+      cart[i].quantity += 1;
+      if (cart[i].quantity < 1) {
+        cart.splice(i, 1);
+        let target = document.getElementById("" + item);
+        target.remove();
+      }
+      //i--;
+    }
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  console.log("celui apres ", cart);
   main();
 }
