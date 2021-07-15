@@ -29,12 +29,17 @@ function displayProduct(product) {
         </div>
     </div>
     <!-- Product actions-->
+    
     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
         <div class="text-center"><a  id="addToCart" class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
-        </div>
     </div>
+    <label for="pet-select">Choose option:</label>
+
+<select name="color" id="select">
+    <option value="dog">option 1</option>
+    <option value="cat">option 2</option>
   </div>
+  
     
     `;
   let addToCartButton = document.getElementById("addToCart");

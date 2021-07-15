@@ -22,9 +22,9 @@ function main() {
         product.id
       }')" class="btn_suppr">-</button></div> 
         </div>
-        <div>${product.price} € - <button  onclick="addProduct('${
-        product.id
-      }')" class="btn_suppr">+</button></div> 
+         <button  onclick="addProduct('${
+           product.id
+         }')" class="btn_suppr">+</button></div> 
           </div>
         <div class="text-right">${product.price * product.quantity} €</div>
       `;
