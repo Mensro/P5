@@ -5,6 +5,12 @@ function main() {
 main();
 
 async function onSubmit(e) {
+  let cart = getProduct();
+  let productsIds = [];
+  for (let index = 0; index < cart.length; index++) {
+    const product = cart[index];
+    productsIds.push(product._id);
+  }
   e.preventDefault();
   var firstName = document.getElementById("firstName").value;
   var lastName = document.getElementById("lastName").value;
@@ -26,7 +32,7 @@ async function onSubmit(e) {
         city: city,
         email: email,
       },
-      products: [""], //il faut juste les id  boucle avec un tableau vide au debut, et pour chaque bouche extract et push l id
+      products: productsIds, //il faut juste les id  boucle avec un tableau vide au debut, et pour chaque bouche extract et push l id
     }),
   });
   const content = await rawResponse.json();

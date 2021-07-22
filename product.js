@@ -14,6 +14,12 @@ async function main() {
 main();
 
 function displayProduct(product) {
+  let lensesHtml = "";
+  for (let index = 0; index < product.lenses.length; index++) {
+    const lense = product.lenses[index];
+    lensesHtml += `<option value="${lense}">${lense}</option>`;
+  }
+  console.log(product);
   let listElement = document.getElementById("contentList");
   const price = product.price / 100;
   listElement.innerHTML += `
@@ -36,8 +42,8 @@ function displayProduct(product) {
     <label for="pet-select">Choose option:</label>
 
 <select name="color" id="select">
-    <option value="dog">option 1</option>
-    <option value="cat">option 2</option>
+    ${lensesHtml}
+
   </div>
   
     

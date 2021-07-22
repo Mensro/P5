@@ -4,7 +4,7 @@ function main() {
   const elem = document.getElementById("showProduct");
 
   console.log(elem);
-  if (localStorage === null) {
+  if (cart === null) {
     const panierVide = `
     <div>
     <div>Le panier est vide</div>
@@ -31,7 +31,7 @@ function main() {
       `;
       if (i + 1 === cart.length) {
         let total = document.getElementById("totalPrice");
-        total.innerHTML = grandTotal;
+        total.innerHTML = grandTotal + "€";
       }
     }
     elem.innerHTML = panierHtml;
