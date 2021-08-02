@@ -14,14 +14,14 @@ function displayProducts(products) {
     console.log(product);
     listElement.innerHTML += `
     <a class="d-flex flex-column" href="product.html?id=${product._id}">
-    <div class="card h-100 ">
+    <div class="card ">
     <img class="card-img-center" src="${product.imageUrl}" alt="..." />
     <div class="card-body p-6">
-        <div class="text-center">
-            <h5 class="fw-bolder text-center">${product.name}</h5>
+        <div class="text-center ">
+            <h5 class="fw-bolder text-center text-dark ">${product.name}</h5>
         </div>
     </div>
-        <a class="btn btn-outline-dark mt-auto" onclick="addProduct({$product})" href="">ADD TO CART</a>
+        <a class="btn btn-outline-dark mt-auto"  href="product.html?id=${product._id}">voir</a>
         
     </div>
   </div>

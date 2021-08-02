@@ -20,14 +20,15 @@ function main() {
       var totalPrice = product.price * product.quantity;
       grandTotal += totalPrice;
       panierHtml += `
-        <div id="${product.id}" class="container-fluid">
-        <div>Quantité ${product.quantity} - ${product.name}</div>
-        <div>${product.price} € - <button  onclick="deleteProduct('${product.id}')" class="btn_suppr">-</button></div> 
+      <div id="${product.id}" class="container-fluid justify-content-center">
+      <div>Quantité ${product.quantity} - ${product.name}</div>
+      <div class="d-flex p-1">
+      <div>${product.price} € - <button  onclick="deleteProduct('${product.id}')" class="btn_suppr">-</button></div> 
+      <button  onclick="addProduct('${product.id}')" class="btn_suppr">+</button></div> 
+      </div>
+      <div class="text-right">${totalPrice} €</div>
         </div>
-         <button  onclick="addProduct('${product.id}')" class="btn_suppr">+</button></div> 
-          </div>
-        <div class="text-right">${totalPrice} €</div>
-        
+      </div>
       `;
       if (i + 1 === cart.length) {
         let total = document.getElementById("totalPrice");

@@ -13,12 +13,13 @@
 
 <body>
 
-    <header class="row align-items-center container-fluid">
-        <form class="d-flex col-1">
+    <header class="d-flex justify-content-right ">
+
+        <form class="d-flex">
             <a href="card.html" class="btn btn-outline-dark" type="submit">
                 <i class="bi-cart-fill me-1"></i>
-                Cart
-                <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                Panier
+                <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
             </a>
         </form>
         <form class="d-flex col-1">
@@ -29,13 +30,13 @@
             </a>
         </form>
     </header>
-    <section>
-        <div id="showProduct">
+    <section class="d-flex row ">
+        <div id="showProduct" class="d-flex flex-column">
         </div>
-        <div class="rowtotal">
+        <div class="rowtotal d-flex flex-column">
             Total: <span id="totalPrice" class="total"></span>
         </div>
-        <a class="btn btn-secondary" href="send_form.html">Send.</a>
+        <a class="btn btn-secondary send col-2" href="send_form.html">Send.</a>
     </section>
     <footer>
 

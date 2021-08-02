@@ -1,31 +1,34 @@
 header {
-  height: 50px;
-  background-color: rgb(212, 202, 189);
-  .container-fluid {
-    margin-right: 0;
-  }
+  background-color: rgb(241, 241, 241);
 }
 section {
-  max-width: 800px;
-  img {
-    margin: 12px 12px 0px 12px;
-  }
-  p {
-    font-size: 1.5em;
+  a {
     color: black;
+    text-decoration: unset;
   }
-  background-color: rgb(255, 255, 255);
-  a:last-of-type {
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  .send {
+    max-width: 200px;
   }
 
-  .card {
-    margin-top: 10px;
-    background-color: rgb(226, 204, 175);
+  .bloc_card {
+    justify-content: center;
+    margin: 0px 2px;
+    padding: unset;
+    display: flex;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    max-width: 350px;
+    max-height: 350px;
+
+    .card {
+      max-height: 400px;
+      margin: 10px 2px;
+      background-color: rgb(241, 241, 241);
+    }
   }
 }
 footer {
-  background-color: rgb(212, 202, 189);
-  height: 50px;
-  margin-top: 10px;
+  background-color: rgb(241, 241, 241);
 }

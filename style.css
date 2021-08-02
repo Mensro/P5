@@ -1,38 +1,51 @@
 header {
-  height: 50px;
-  background-color: #d4cabd;
-}
-
-header .container-fluid {
-  margin-right: 0;
+  background-color: #f1f1f1;
 }
 
 section {
-  max-width: 800px;
-  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-section img {
-  margin: 12px 12px 0px 12px;
-}
-
-section p {
-  font-size: 1.5em;
+section a {
   color: black;
+  text-decoration: unset;
 }
 
-section a:last-of-type {
-  margin-bottom: 10px;
+section .send {
+  max-width: 200px;
 }
 
-section .card {
-  margin-top: 10px;
-  background-color: #e2ccaf;
+section .bloc_card {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 2px;
+  padding: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 350px;
+  max-height: 350px;
+}
+
+section .bloc_card .card {
+  max-height: 400px;
+  margin: 10px 2px;
+  background-color: #f1f1f1;
 }
 
 footer {
-  background-color: #d4cabd;
-  height: 50px;
-  margin-top: 10px;
+  background-color: #f1f1f1;
 }
 /*# sourceMappingURL=style.css.map */
