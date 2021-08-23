@@ -11,6 +11,33 @@ section {
           justify-content: center;
 }
 
+section .panier {
+  margin-top: 20px;
+  max-width: 400px;
+  background: rgba(211, 211, 211, 0.226);
+  border-radius: 30px;
+}
+
+section .sous_total {
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+section .total {
+  margin-left: 30px;
+  font-weight: bolder;
+}
+
+section .rowtotal {
+  margin: 20px 0;
+  background: rgba(96, 104, 96, 0.062);
+  font-size: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bolder;
+}
+
 section a {
   color: black;
   text-decoration: unset;

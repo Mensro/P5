@@ -23,10 +23,10 @@ function main() {
       <div id="${product.id}" class="container-fluid justify-content-center">
       <div>Quantité ${product.quantity} - ${product.name}</div>
       <div class="d-flex p-1">
-      <div>${product.price} € - <button  onclick="deleteProduct('${product.id}')" class="btn_suppr">-</button></div> 
-      <button  onclick="addProduct('${product.id}')" class="btn_suppr">+</button></div> 
+      <div>${product.price} € - <button  onclick="deleteProduct('${product.id}')" class="btn_suppr btn btn-outline-secondary">-</button></div> 
+      <button  onclick="addProduct('${product.id}')" class="btn_suppr btn btn-outline-secondary">+</button></div> 
       </div>
-      <div class="text-right">${totalPrice} €</div>
+      <div class="text-right sous_total">${totalPrice} €</div>
         </div>
       </div>
       `;

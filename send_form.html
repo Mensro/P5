@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
     <title>Document</title>
 </head>
 
@@ -39,14 +40,14 @@
 
         </div>
         <div class="form-row">
-            <div class="col-md-6 mb-3 container center_div">
+            <div class="col-md-4 mb-3 container center_div">
                 <label for="validationServer03">City</label>
                 <input type="text" class="form-control" id="city" placeholder="City" required>
                 <div class="needs-feedback">
                     Please provide a valid city.
                 </div>
             </div>
-            <div class="col-md-3 mb-3 container center_div">
+            <div class="col-md-4 mb-3 container center_div">
                 <label for="validationServer04">email</label>
                 <input type="text" class="form-control" id="email" placeholder="example@..." required>
                 <div class="invalid-feedback">
@@ -55,7 +56,7 @@
             </div>
 
         </div>
-        <div class="form-group ">
+        <div class="form-group d-flex justify-content-center">
             <div class="form-check ">
                 <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
                 <label class="form-check-label" for="invalidCheck3">
@@ -66,7 +67,9 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn-primary container btn_width" type="submit">Submit form</button>
+        <button class="btn btn-secondary container btn_width d-flex justify-content-center send" type="submit">Submit
+            form</button>
+
     </form>
 
 </body>

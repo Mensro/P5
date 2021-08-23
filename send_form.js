@@ -7,9 +7,11 @@ main();
 async function onSubmit(e) {
   let cart = getProduct();
   let productsIds = [];
+  localStorage.removeItem("order");
+  console.log(cart);
   for (let index = 0; index < cart.length; index++) {
     const product = cart[index];
-    productsIds.push(product._id);
+    productsIds.push(product.id);
   }
   e.preventDefault();
   var firstName = document.getElementById("firstName").value;
@@ -34,6 +36,17 @@ async function onSubmit(e) {
       },
       products: productsIds, //il faut juste les id  boucle avec un tableau vide au debut, et pour chaque bouche extract et push l id
     }),
-  });
-  const content = await rawResponse.json();
+  })
+    .then((res) => {
+      res.json().then((rez) => {
+        console.log(rez.orderId);
+        localStorage.setItem("order", rez.orderId);
+        localStorage.removeItem("cart");
+        window.location.href = "confirmation.html";
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  // const content = await rawResponse.json();
 }
