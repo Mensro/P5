@@ -34,7 +34,7 @@ async function onSubmit(e) {
         city: city,
         email: email,
       },
-      products: productsIds, //il faut juste les id  boucle avec un tableau vide au debut, et pour chaque bouche extract et push l id
+      products: productsIds,
     }),
   })
     .then((res) => {
