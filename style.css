@@ -47,25 +47,6 @@ section .send {
   max-width: 200px;
 }
 
-section .bloc_card {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0px 2px;
-  padding: unset;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: initial;
-  -webkit-box-direction: initial;
-      -ms-flex-direction: initial;
-          flex-direction: initial;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 350px;
-  max-height: 350px;
-}
-
 section .bloc_card .card {
   max-height: 400px;
   margin: 10px 2px;

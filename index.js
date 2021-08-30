@@ -13,12 +13,12 @@ function displayProducts(products) {
     const product = products[index];
     console.log(product);
     listElement.innerHTML += `
-    <a class="d-flex flex-column" href="product.html?id=${product._id}">
-    <div class="card ">
-    <img class="card-img-center" src="${product.imageUrl}" alt="..." />
-    <div class="card-body p-6">
+    <a class="" href="product.html?id=${product._id}">
+    <div class="card">
+    <img class="card-img-center img-thumbnail" src="${product.imageUrl}" alt="..." />
+    <div class="card-body">
         <div class="text-center ">
-            <h5 class="fw-bolder text-center text-dark ">${product.name}</h5>
+            <h5 class="fw-bolder text-center text-dark">${product.name}</h5>
         </div>
     </div>
         <a class="btn btn-outline-dark mt-auto"  href="product.html?id=${product._id}">voir</a>
