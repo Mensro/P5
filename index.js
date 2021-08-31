@@ -13,6 +13,7 @@ function displayProducts(products) {
     const product = products[index];
     console.log(product);
     listElement.innerHTML += `
+    <div class="col-md-4 d-flex cardProd">
     <a class="" href="product.html?id=${product._id}">
     <div class="card">
     <img class="card-img-center img-thumbnail" src="${product.imageUrl}" alt="..." />
@@ -27,6 +28,7 @@ function displayProducts(products) {
   </div>
           
       </a>
+      </div>
     `;
   }
 }

@@ -11,6 +11,10 @@ section {
           justify-content: center;
 }
 
+section .cardProd {
+  margin-top: 10px;
+}
+
 section .panier {
   margin-top: 20px;
   max-width: 400px;
